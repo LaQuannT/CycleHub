@@ -10,7 +10,10 @@ const Hero = () => {
         <p className="my-5 font-light">
           Get all specs on any motorcycle of your choosing with our spec finder.
         </p>
-        <button type="button" className="px-5 py-2 rounded-3xl bg-blue-400">
+        <button
+          type="button"
+          className="px-5 py-2 rounded-3xl bg-cyan-400 text-gray-800 shadow hover:text-gray-200"
+        >
           Find Specs
         </button>
       </div>
