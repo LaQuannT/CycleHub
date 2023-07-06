@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 relative bottom-0 w-screen">
-      <div className="grid grid-cols-2 gap-5 max-w-[1440px] px-8 py-5 md:grid-cols-4">
+    <footer className="bg-gray-50 relative bottom-0 w-screen">
+      <div className="grid grid-cols-2 gap-5 max-w-[1440px] mx-auto px-8 py-5 md:grid-cols-4">
         <div>
           <h3 className="font-extrabold">
             <FaMotorcycle size={25} className="inline" /> CycleHub

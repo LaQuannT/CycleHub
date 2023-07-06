@@ -27,3 +27,18 @@ export const footerLinks = [
     ],
   },
 ];
+
+export const popularBrands = [
+  {
+    title: 'Harley Davidson',
+    url: 'harley-davidson-logo.svg',
+  },
+  {
+    title: 'Honda',
+    url: '/honda-logo.svg',
+  },
+  {
+    title: 'Yamaha',
+    url: '/yamaha-logo.svg',
+  },
+];
