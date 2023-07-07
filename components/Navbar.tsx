@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -13,9 +14,16 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-gray-100">
-      <nav className="md:flex md:items-center md:justify-between max-w-[1440px] mx-auto p-4">
-        <Link href="/">
+    <header className="sticky top-0 bg-gray-50">
+      <div className="mx-width mx-auto p-4 flex justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/motorcycle-icon.png"
+            width={40}
+            height={40}
+            alt="motorcycle icon"
+            className="inline"
+          />
           <h1 className="text-2xl font-bold inline text-gray-500">
             Cycle <span className="text-cyan-400">Hub</span>
           </h1>
@@ -29,43 +37,25 @@ const Navbar = () => {
           {isActive ? <AiOutlineClose size={25} /> : <FiMenu size={25} />}
         </button>
 
-        <ul className="hidden md:flex md:items-center md:gap-5 md:text-sm md:font-light pl-7 md:py-0">
-          <li className="my-0 p-1 rounded hover:text-cyan-500 hover:bg-gray-200 duration-300">
-            <Link href="/about">About</Link>
-          </li>
-
-          <li className="my-0 p-1 rounded hover:text-cyan-500 hover:bg-gray-200 duration-300">
-            <Link href="contact">Contact</Link>
-          </li>
-
-          <li className="my-0 p-1 rounded hover:text-cyan-500 duration-300">
-            <Link
-              href="/search"
-              className="rounded-2xl px-4 md:py-2 bg-cyan-400 text-gray-700 font-semibold hover:text-gray-200 shadow"
-            >
-              Finder
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
-      <ul className="md:hidden hidden pl-8 pr-4 absolute bg-gray-100 w-full text-gray-500 font-semibold">
-        <li className="hover:bg-cyan-400 rounded mb-4 p-1 hover:text-gray-200">
-          <Link href="/about" className="">
-            About
-          </Link>
-        </li>
-
-        <li className="hover:bg-cyan-400 rounded mb-4 p-1 hover:text-gray-200">
-          <Link href="contact">Contact</Link>
-        </li>
-
-        <li className="hover:bg-cyan-400 rounded mb-4 p-1 hover:text-gray-200">
-          <Link href="/search" className="">
-            Finder
-          </Link>
-        </li>
-      </ul>
+        <nav className="hidden lg:block">
+          <ul className="flex space-x-3">
+            <li className="nav-link">
+              <Link href="/about">About</Link>
+            </li>
+            <li className="nav-link">
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li className="my-0 p-1 rounded duration-300">
+              <Link
+                href="/search"
+                className="rounded-2xl px-4 py-2 bg-cyan-400 text-gray-700 font-semibold hover:text-gray-200 shadow"
+              >
+                Finder
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

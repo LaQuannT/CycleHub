@@ -41,4 +41,16 @@ export const popularBrands = [
     title: 'Yamaha',
     url: '/yamaha-logo.svg',
   },
+  {
+    title: 'Kawasaki',
+    url: '/kawasaki-logo.svg',
+  },
+  {
+    title: 'BMW',
+    url: '/bmw-logo.svg',
+  },
+  {
+    title: 'Ducati',
+    url: '/ducati-logo.svg',
+  },
 ];

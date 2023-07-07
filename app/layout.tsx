@@ -1,9 +1,5 @@
-import Navbar from '@/components/Navbar';
+import { Footer, Navbar } from '@/components';
 import './globals.css';
-import { Montserrat } from 'next/font/google';
-import Footer from '@/components/Footer';
-
-const montserrat = Montserrat({ subsets: ['cyrillic'] });
 
 export const metadata = {
   title: 'Cycle Hub',
@@ -17,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body>
         <Navbar />
         {children}
         <Footer />
