@@ -16,5 +16,13 @@
 }
 
 .nav-link {
-  @apply my-0 p-1 rounded hover:text-cyan-500 hover:bg-gray-200 duration-300;
+  @apply my-0 p-1 rounded hover:text-cyan-500 hover:bg-gray-200 duration-300 font-light;
+}
+
+.h4-questions {
+  @apply text-2xl font-light text-gray-500 p-4;
+}
+
+.p-text {
+  @apply my-4 text-gray-600 text-lg;
 }

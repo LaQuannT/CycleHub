@@ -11,14 +11,14 @@ const Hero = () => {
     <section className="h-[80%] md:h-[75vh] bg-gray-50 grid place-content-center">
       <div className="max-width flex flex-col md:flex-row-reverse">
         <div className="py-16 px-8 text-center md:text-start md:w-1/2 lg:mx-auto">
-          <Balancer>
-            <h1 className=" text-4xl md:text-5xl font-extrabold">
-              Find motorcycle specs quick and easy
-            </h1>
-          </Balancer>
+          <h1 className=" text-4xl md:text-5xl font-extrabold">
+            <Balancer>Find motorcycle specs quick and easy</Balancer>
+          </h1>
           <p className="my-5 font-light ">
-            Using our spec finder, get all specs on any motorcycle of your
-            choosing.
+            <Balancer>
+              Using our spec finder, get all specs on any motorcycle of your
+              choosing.
+            </Balancer>
           </p>
           <CustomButton
             text="Find Specs"
