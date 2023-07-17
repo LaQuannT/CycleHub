@@ -44,3 +44,18 @@ export interface MotorcycleProps {
 export interface PreviewCardProps {
   motorcycle: MotorcycleProps;
 }
+
+export interface SearchParams {
+  manufacturer: string;
+  model: string;
+  productionYear: string;
+  offset?: number;
+}
+
+export interface MotorcycleData {
+  data: Array<MotorcycleProps>;
+}
+
+export interface SearchProps {
+  searchParams: SearchParams;
+}
