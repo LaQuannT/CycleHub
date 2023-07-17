@@ -14,7 +14,7 @@ const CustomButton = ({
       className={`bg-cyan-400 rounded-3xl ${styles}`}
       onClick={eventHandler}
     >
-      <span className="flex-1">{text}</span>
+      <span className="flex-1 text-gray-600">{text}</span>
     </button>
   );
 };

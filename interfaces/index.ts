@@ -15,3 +15,32 @@ interface Brand {
 export interface LogoImgCardProps {
   brands: Brand[];
 }
+
+export interface MotorcycleProps {
+  make: string;
+  model: string;
+  year: string;
+  type?: string;
+  displacement?: string;
+  engine?: string;
+  power?: string;
+  top_speed?: string;
+  compression?: string;
+  bore_stroke?: string;
+  valves_per_cylinder?: string;
+  fuel_control?: string;
+  cooling?: string;
+  gearbox?: string;
+  transmission?: string;
+  front_tire?: string;
+  rear_tire?: string;
+  front_brakes?: string;
+  rear_brakes?: string;
+  total_weight?: string;
+  fuel_capacity?: string;
+  starter?: string;
+}
+
+export interface PreviewCardProps {
+  motorcycle: MotorcycleProps;
+}
