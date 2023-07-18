@@ -11,10 +11,16 @@ const Navbar = () => {
 
   const handleClick = () => {
     setIsActive(!isActive);
+
+    const mobileNav = document.getElementById('mobile-nav') as HTMLElement;
+
+    isActive
+      ? (mobileNav.style.display = '')
+      : (mobileNav.style.display = 'flex');
   };
 
   return (
-    <header className="sticky top-0 bg-gray-50">
+    <header className="sticky top-0 bg-gray-50 z-[5]">
       <div className="mx-width mx-auto p-4 flex justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -34,7 +40,7 @@ const Navbar = () => {
           className="hover:bg-gray-200 rounded p-1 md:hidden float-right"
           onClick={handleClick}
         >
-          {isActive ? <AiOutlineClose size={25} /> : <FiMenu size={25} />}
+          {isActive ? <AiOutlineClose size={20} /> : <FiMenu size={20} />}
         </button>
 
         <nav className="hidden lg:block">
@@ -48,7 +54,7 @@ const Navbar = () => {
             <li className="my-0 p-1 rounded duration-300">
               <Link
                 href="/search"
-                className="rounded-2xl px-4 py-2 bg-cyan-400 text-gray-700 font-semibold hover:text-gray-200 shadow"
+                className="rounded-2xl px-4 py-2 bg-cyan-400 text-gray-600 hover:text-gray-200 shadow"
               >
                 Finder
               </Link>
@@ -56,6 +62,29 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+      <nav
+        id="mobile-nav"
+        className="hidden absolute md:hidden bg-gray-100 flex-col gap-2 w-screen py-2 shadow-md z-0"
+      >
+        <Link
+          href="/about"
+          className="nav-link mx-2 hover:border-l-4 border-l-cyan-400"
+        >
+          About
+        </Link>
+        <Link
+          href="/contact"
+          className="nav-link mx-2 hover:border-l-4 border-l-cyan-400"
+        >
+          Contact
+        </Link>
+        <Link
+          href="/search"
+          className="nav-link mx-2 hover:border-l-4 border-l-cyan-400"
+        >
+          Finder
+        </Link>
+      </nav>
     </header>
   );
 };
