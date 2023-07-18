@@ -5,6 +5,7 @@ import LogoImageCard from './LogoImage';
 import Footer from './Footer';
 import SearchBar from './SearchBar';
 import PreviewCard from './PreviewCard';
+import MotorcycleModal from './MotorcycleModal';
 
 export {
   Hero,
@@ -14,4 +15,5 @@ export {
   Footer,
   SearchBar,
   PreviewCard,
+  MotorcycleModal,
 };

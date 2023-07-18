@@ -8,12 +8,18 @@ const metadata = {
 };
 
 export default async function Search({ searchParams }: SearchProps) {
-  const motorcycles = await fetchMotorcycles({
-    manufacturer: searchParams.manufacturer || '',
-    model: searchParams.model || '',
-    productionYear: searchParams.productionYear || '',
-    offset: searchParams.offset || 0,
-  });
+  // const motorcycles = await fetchMotorcycles({
+  //   manufacturer: searchParams.manufacturer || '',
+  //   model: searchParams.model || '',
+  //   productionYear: searchParams.productionYear || '',
+  //   offset: searchParams.offset || 0,
+  // });
+
+  function isDataEmpty(): boolean {
+    // if (motorcycles == null || motorcycles === undefined) return true;
+    if (testData.length < 0) return true;
+    return false;
+  }
 
   return (
     <main className="min-h-screen">
@@ -29,11 +35,19 @@ export default async function Search({ searchParams }: SearchProps) {
         <div className="mx-6 bg-white rounded shadow-md p-3 relative bottom-7 md:w-fit md:left-1/4 z-0">
           <SearchBar />
         </div>
-        <div className="my-8 flex flex-col gap-5">
-          {motorcycles?.map((bike, index) => (
-            <PreviewCard key={index} motorcycle={bike} />
-          ))}
-        </div>
+        {isDataEmpty() ? (
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-200 mt-36">
+              No Search Data
+            </h2>
+          </div>
+        ) : (
+          <div className="my-8 flex flex-col gap-5">
+            {testData?.map((bike, index) => (
+              <PreviewCard key={index} motorcycle={bike} />
+            ))}
+          </div>
+        )}
       </div>
     </main>
   );

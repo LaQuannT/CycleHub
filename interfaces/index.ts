@@ -59,3 +59,8 @@ export interface MotorcycleData {
 export interface SearchProps {
   searchParams: SearchParams;
 }
+
+export interface MotorcycleModalProps {
+  motorcycle: MotorcycleProps;
+  eventHandler: MouseEventHandler<SVGElement>;
+}
