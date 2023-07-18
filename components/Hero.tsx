@@ -1,10 +1,6 @@
-'use client';
-
-import CustomButton from './CustomButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Balancer } from 'react-wrap-balancer';
-
-const handleClick = () => {};
 
 const Hero = () => {
   return (
@@ -20,11 +16,12 @@ const Hero = () => {
               choosing.
             </Balancer>
           </p>
-          <CustomButton
-            text="Find Specs"
-            eventHandler={handleClick}
-            styles="px-5 py-2 text-gray-800 shadow hover:text-gray-200"
-          />
+          <Link
+            href="/search"
+            className=" rounded-3xl bg-cyan-400 px-5 py-2 text-gray-800 shadow-md hover:text-gray-200"
+          >
+            Find Specs
+          </Link>
         </div>
         <div className="flex justify-center">
           <Image
