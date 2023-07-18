@@ -85,7 +85,7 @@ export default function SearchBar() {
       <CustomButton
         text="Search"
         btnType="submit"
-        styles="py-1 md:rounded px-5"
+        styles="py-1 md:rounded px-5 shadow-md"
       />
     </form>
   );

@@ -11,10 +11,10 @@ const CustomButton = ({
   return (
     <button
       type={btnType || 'button'}
-      className={`bg-cyan-400 rounded-3xl ${styles}`}
+      className={`bg-cyan-400 rounded-3xl hover:text-gray-100 ${styles}`}
       onClick={eventHandler}
     >
-      <span className="flex-1 text-gray-600">{text}</span>
+      {text}
     </button>
   );
 };
