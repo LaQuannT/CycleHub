@@ -1,5 +1,4 @@
 import { PreviewCard, SearchBar } from '@/components';
-import { testData } from '@/constants';
 import { SearchProps } from '@/interfaces';
 import { fetchMotorcycles } from '@/utils';
 
@@ -8,16 +7,15 @@ const metadata = {
 };
 
 export default async function Search({ searchParams }: SearchProps) {
-  // const motorcycles = await fetchMotorcycles({
-  //   manufacturer: searchParams.manufacturer || '',
-  //   model: searchParams.model || '',
-  //   productionYear: searchParams.productionYear || '',
-  //   offset: searchParams.offset || 0,
-  // });
+  const motorcycles = await fetchMotorcycles({
+    manufacturer: searchParams.manufacturer || '',
+    model: searchParams.model || '',
+    productionYear: searchParams.productionYear || '',
+    offset: searchParams.offset || 0,
+  });
 
   function isDataEmpty(): boolean {
-    // if (motorcycles == null || motorcycles === undefined) return true;
-    if (testData.length < 0) return true;
+    if (motorcycles == null || motorcycles === undefined) return true;
     return false;
   }
 
@@ -43,7 +41,7 @@ export default async function Search({ searchParams }: SearchProps) {
           </div>
         ) : (
           <div className="my-8 flex flex-col gap-5">
-            {testData?.map((bike, index) => (
+            {motorcycles?.map((bike, index) => (
               <PreviewCard key={index} motorcycle={bike} />
             ))}
           </div>

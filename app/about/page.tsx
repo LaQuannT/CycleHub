@@ -6,9 +6,9 @@ const metadata = {
 
 const About = () => {
   return (
-    <main className="">
+    <main>
       <div className="max-width mx-auto text-center">
-        <section className="my-24">
+        <section className="my-24 mx-3">
           <h2 className="text-3xl font-bold text-gray-500 my-16">Our Story</h2>
 
           <h4 className="h4-questions">

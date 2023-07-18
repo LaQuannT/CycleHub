@@ -9,9 +9,9 @@ const Contact = () => {
   return (
     <main>
       <div className="max-width mx-auto">
-        <div className="flex flex-col gap-5 h-[80dvh] md:flex-row">
+        <div className="flex flex-col gap-5 min-h-screen md:flex-row">
           <section className="flex justify-center items-center my-16 md:w-1/2">
-            <div className=" space-y-4">
+            <div className="mx-3 space-y-4">
               <div>
                 <h2 className="text-5xl font-semibold text-gray-500">
                   Let&#39;s Chat.
